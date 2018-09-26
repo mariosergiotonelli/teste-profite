@@ -1,0 +1,16 @@
+@import "node_modules/breakpoint-sass/stylesheets/_breakpoint.scss";
+@import "node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+
+body{
+	background-color: white;
+
+	.headerProfite{
+		background-color: #ccc;
+		height: 80px;		
+		width: 100%;
+
+		.logoProfite{
+			
+		}
+	}
+}
