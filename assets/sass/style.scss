@@ -1,7 +1,8 @@
 @import "node_modules/breakpoint-sass/stylesheets/_breakpoint.scss";
 @import "node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 
-$header: #ccc;
+@import "_variable.scss";
+@import "_mixins.scss";
 
 body{
 	background-color: white;
@@ -74,6 +75,30 @@ body{
 			@include make-md-column(2);
 			.banES{
 				margin: 0 10px;
+			}
+		}
+	}
+
+	.mainProfite{
+		.banner{
+			
+		}
+
+		.paginator{
+			padding: 0 240px;
+			position: absolute;
+			top: 220px;
+			width: 100%;
+
+			.prev{
+				background: url(../img/left_banner.png) no-repeat;
+				float: left;
+				@include prevNext;
+			}
+			.next{
+				background: url(../img/right_banner.png) no-repeat;
+				float: right;
+				@include prevNext;
 			}
 		}
 	}

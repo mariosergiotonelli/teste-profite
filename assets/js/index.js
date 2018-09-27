@@ -1,6 +1,6 @@
 	$(document).on('ready', function() {
 
-		$(".slider-footer").slick({
+		$(".banner").slick({
 
 			dots: false,
 
@@ -61,3 +61,5 @@
 		});
 
 	});
+
+	
