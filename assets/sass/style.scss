@@ -1,6 +1,8 @@
 @import "node_modules/breakpoint-sass/stylesheets/_breakpoint.scss";
 @import "node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 
+@import "_header.scss";
+@import "_footer.scss";
 @import "_variable.scss";
 @import "_mixins.scss";
 
@@ -8,95 +10,11 @@ body{
 	background-color: #fff;
 	font-family: 'Ubuntu', sans-serif;
 
-	.headerProfite{
-		background-color: $header;
-		height: 80px;	
-		padding: 25px 0;	
-		width: 100%;
-
-		.logoProfite{
-			background: url(../img/logo.png);
-			background-repeat: no-repeat;
-			display: inline-block;
-			float: left;
-			height: 30px;
-			margin: 0px 10px;
-			text-indent: -999px;
-			width: 106px;
-
-			@include breakpoint($celular){
-				display: block;
-				float: none;
-				margin: 0 auto 20px;
-			}
-		}
-
-		.buscaHeader{
-			@include make-xs-column(12);
-			@include make-sm-column(12);
-			@include make-md-column(4);
-			margin: 0px 100px;
-
-			@include breakpoint($celular){
-				margin:0;
-			}
-
-			.inputBuscaHeader{
-				border-bottom: 1px solid #7A7A7A;
-			}
-
-			.lupa{
-				background: url(../img/icon.png);
-				background-repeat: no-repeat;
-				border:none;
-				display: inline-block;
-				height: 30px;
-				margin: 8px 0;
-				text-indent: -9999px;
-				width: 30px;
-			}
-		}
-
-		.menuUsuario{
-			@include make-xs-column(12);
-			@include make-sm-column(12);
-			@include make-md-column(2);
-			border-right: 2px solid #7A7A7A;
-
-
-			.minhaConta{
-				color: #7A7A7A;
-				display: inline-block;
-				font-size: 13px;
-				margin: 0 20px 0 0;
-			}
-			.qtdadeCompras{
-				background: #2ec4b6;
-				border-radius: 50%;
-				color: #fff;
-				font-size: 10px;
-				display: inline-block;
-				padding: 2px 6px;
-			}
-		}
-
-		.menuBandeiras{
-			@include make-xs-column(12);
-			@include make-sm-column(12);
-			@include make-md-column(2);
-			.banES{
-				margin: 0 10px;
-			}
-		}
-	}// fim Header
-
 	.mainProfite{
 		.banner{	
-
-			.slick-list{
-				overflow: visible;
+			@include breakpoint($celular){
+				display: none;
 			}
-
 		}
 
 		.paginator{
@@ -115,13 +33,22 @@ body{
 				float: right;
 				@include prevNext;
 			}
+
+			@include breakpoint($celular){
+				display: none;
+			}
 		}
 
 		.produtos{
 			.tituloProdutos{
 				color: #000;	
 				font-weight: bold;			
-				position: relative;				
+				position: relative;
+
+				@include breakpoint($celular){
+					padding: 0 20px;
+				}
+
 				&:after{
 					background: #ff9b00;					
 					content: "";
@@ -129,8 +56,12 @@ body{
 					left: calc(7.4% - 85px);
 					opacity: 1;
 					position: absolute;
-					top: 30px;					
+					top: 40px;					
 					width: 65px;
+
+					@include breakpoint($celular){
+						left: calc(105px - 85px);
+					}
 				}
 			}
 
@@ -177,120 +108,14 @@ body{
 					font-size: 11px;
 				}
 
+				.btnComprar{
+					background-color: #2EC4B6;
+					color:#fff;
+					text-transform: uppercase;
+				}
+
 			}			
 
 		}
 	}// fim Main
-
-	.footerProfite{
-		background-color: $footer;
-		border-bottom: 10px solid #2EC4B6;
-		padding: 20px 0;
-
-		@include breakpoint($celular){
-			padding: 20px;
-		}
-
-		.tituloFooter{
-			color: #fff;	
-			font-weight: bold;			
-			position: relative;				
-			&:after{
-				background: #ff9b00;
-				content: "";
-				height: 7px;
-				left: calc(7.4% - 85px);
-				opacity: 1;
-				position: absolute;
-				top: 40px;					
-				width: 65px;
-			}
-
-			@include breakpoint($celular){
-				&:after{
-					left: calc(31% - 85px);
-					width: 50px;
-				}
-			}
-		}
-
-		.blocoRodape{
-			padding: 30px 0;
-
-			.endSP{
-				@include make-xs-column(6);
-				@include make-sm-column(12);
-				@include make-md-column(2.5);
-				color: #fff;
-				font-family: 'Ubuntu', sans-serif;
-				padding: 0;
-				.tituloSP{
-					font-weight: bold;
-				}
-				p{
-					margin: 0;
-				}
-			}
-
-			.endRJ{
-				@include make-xs-column(6);
-				@include make-sm-column(12);
-				@include make-md-column(2.5);
-				color: #fff;
-				font-family: 'Ubuntu', sans-serif;
-				padding: 0;
-				.tituloRJ{
-					font-weight: bold;
-				}
-				p{
-					margin: 0;
-				}
-			}
-
-			.btnContatos{
-				@include make-xs-column(12);
-				@include make-sm-column(12);
-				@include make-md-column(2.5);
-				font-family: 'Ubuntu', sans-serif;
-
-				@include breakpoint($celular){
-					text-align: center;
-				}
-
-				.entreContato{
-					@include btnFooter;
-					margin: 20px 0;
-				}
-
-				.faleConosco{
-					@include btnFooter;
-				}
-			}
-
-			.logosFooter{
-				@include make-xs-column(12);
-				@include make-sm-column(12);
-				@include make-md-column(4.5);
-				margin-top: 80px;
-				padding: 0;
-				text-align: right;
-				vertical-align: bottom;
-
-				@include breakpoint($celular){
-					margin-top: 30px;
-				}
-				.logoProfiteFooter{
-					@include breakpoint($celular){
-						float: left;
-					}
-				}
-				.logoVtexFooter{
-					@include breakpoint($celular){
-						float: right;
-					}
-				}
-			}
-
-		}
-	}//fim footer
 }//fim body 

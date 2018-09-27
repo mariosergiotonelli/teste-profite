@@ -1,65 +1,63 @@
-	$(document).on('ready', function() {
+$(document).on('ready', function() {
 
-		$(".banner").slick({
+	$(".banner").slick({
 
-			dots: false,
+		dots: false,
 
-			infinite: true,
+		infinite: true,
 
-			slidesToShow: 1,
+		slidesToShow: 1,
 
-			slidesToScroll: 1,
+		slidesToScroll: 1,
 
-			autoplay: true,
+		autoplay: true,
 
-			autoplaySpeed: 2000,
+		autoplaySpeed: 2000,
 
-			prevArrow: $('.prev'),
+		prevArrow: $('.prev'),
 
-			nextArrow: $('.next'),
+		nextArrow: $('.next'),
 
-			responsive: [
+		responsive: [
 
-			{
+		{
 
-				breakpoint: 600,
+			breakpoint: 600,
 
-				settings: {
+			settings: {
 
-					slidesToShow: 1,
+				slidesToShow: 1,
 
-					slidesToScroll: 1,
+				slidesToScroll: 1,
 
-					prevArrow: null,
+				prevArrow: null,
 
-					nextArrow: null,
-
-				}
-
-			},
-
-			{
-
-				breakpoint: 480,
-
-				settings: {
-
-					slidesToShow: 1,
-
-					slidesToScroll: 1,
-
-					prevArrow: null,
-
-					nextArrow: null,
-
-				}
+				nextArrow: null,
 
 			}
 
-			]
+		},
 
-		});
+		{
+
+			breakpoint: 480,
+
+			settings: {
+
+				slidesToShow: 1,
+
+				slidesToScroll: 1,
+
+				prevArrow: null,
+
+				nextArrow: null,
+
+			}
+
+		}
+
+		]
 
 	});
 
-	
+});
