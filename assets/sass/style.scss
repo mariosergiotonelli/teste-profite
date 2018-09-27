@@ -23,6 +23,12 @@ body{
 			margin: 0px 10px;
 			text-indent: -999px;
 			width: 106px;
+
+			@include breakpoint($celular){
+				display: block;
+				float: none;
+				margin: 0 auto 20px;
+			}
 		}
 
 		.buscaHeader{
@@ -30,6 +36,10 @@ body{
 			@include make-sm-column(12);
 			@include make-md-column(4);
 			margin: 0px 100px;
+
+			@include breakpoint($celular){
+				margin:0;
+			}
 
 			.inputBuscaHeader{
 				border-bottom: 1px solid #7A7A7A;
@@ -81,7 +91,12 @@ body{
 	}// fim Header
 
 	.mainProfite{
-		.banner{			
+		.banner{	
+
+			.slick-list{
+				overflow: visible;
+			}
+
 		}
 
 		.paginator{
