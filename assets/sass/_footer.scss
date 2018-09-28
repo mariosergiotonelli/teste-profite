@@ -28,7 +28,7 @@
 			width: 65px;
 		}
 
-		@include breakpoint($celular){
+		@include breakpoint($tablet){
 			&:after{
 				left: calc(87px - 85px);
 				width: 50px;
@@ -41,11 +41,20 @@
 
 		.endSP{
 			@include make-xs-column(6);
-			@include make-sm-column(12);
+			@include make-sm-column(6);
 			@include make-md-column(2.5);
 			color: #fff;
 			font-family: 'Ubuntu', sans-serif;
 			padding: 0;
+
+			@include breakpoint($tablet){
+				text-align: center;
+			}
+
+			@include breakpoint($celular){
+				text-align: left;
+			}
+
 			.tituloSP{
 				font-weight: bold;
 			}
@@ -56,11 +65,20 @@
 
 		.endRJ{
 			@include make-xs-column(6);
-			@include make-sm-column(12);
+			@include make-sm-column(6);
 			@include make-md-column(2.5);
 			color: #fff;
 			font-family: 'Ubuntu', sans-serif;
 			padding: 0;
+			
+			@include breakpoint($tablet){
+				text-align: center;
+			}
+
+			@include breakpoint($celular){
+				text-align: left;
+			}	
+
 			.tituloRJ{
 				font-weight: bold;
 			}
@@ -70,10 +88,16 @@
 		}
 
 		.btnContatos{
-			@include make-xs-column(12);
-			@include make-sm-column(12);
+			@include make-xs-column(8);
+			@include make-sm-column(4);
 			@include make-md-column(2.5);
 			font-family: 'Ubuntu', sans-serif;
+
+			@include breakpoint($tablet){				
+				float: none;
+				margin: 0 auto;
+				text-align: center;
+			}
 
 			@include breakpoint($celular){
 				text-align: center;
@@ -98,17 +122,23 @@
 			text-align: right;
 			vertical-align: bottom;
 
+			@include breakpoint($tablet){
+				margin-top: 30px;
+				text-align: center;
+			}
+
 			@include breakpoint($celular){
 				margin-top: 30px;
+
 			}
 			.logoProfiteFooter{
-				@include breakpoint($celular){
-					float: left;
+				@include breakpoint($tablet){
+					margin: 0 30px;
 				}
 			}
 			.logoVtexFooter{
-				@include breakpoint($celular){
-					float: right;
+				@include breakpoint($tablet){
+					margin: 0 30px;
 				}
 			}
 		}

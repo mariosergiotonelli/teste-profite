@@ -30,6 +30,15 @@ body{
 			top: 220px;
 			width: 100%;
 
+			@include breakpoint($note){
+				padding: 0 170px;
+				top: 33%;
+			}
+
+			@include breakpoint($tablet){
+				display: none;
+			}
+
 			.prev{
 				background: url(../img/left_banner.png) no-repeat;
 				float: left;
@@ -41,9 +50,7 @@ body{
 				@include prevNext;
 			}
 
-			@include breakpoint($celular){
-				display: none;
-			}
+
 		}
 
 		.produtos{
@@ -65,6 +72,10 @@ body{
 					position: absolute;
 					top: 40px;					
 					width: 65px;
+
+					@include breakpoint($tablet){
+						left: calc(87px - 85px);
+					}
 
 					@include breakpoint($celular){
 						left: calc(105px - 85px);

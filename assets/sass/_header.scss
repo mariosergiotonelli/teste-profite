@@ -25,7 +25,7 @@
 		text-indent: -999px;
 		width: 106px;
 
-		@include breakpoint($celular){
+		@include breakpoint($tablet){
 			display: block;
 			float: none;
 			margin: 0 auto 20px;
@@ -38,21 +38,29 @@
 		@include make-md-column(4);
 		margin: 0px 100px;
 
-		@include breakpoint($celular){
+		@include breakpoint($note){
+			margin: 0 40px;
+		}
+
+		@include breakpoint($tablet){
 			margin:0;
 		}
 
 		.inputBuscaHeader{
+			border: none;
 			border-bottom: 1px solid #7A7A7A;
+			border-radius: 0; 
 		}
 
 		.lupa{
 			background: url(../img/icon.png);
 			background-repeat: no-repeat;
-			border:none;
+			border: none;
+			border-bottom: 1px solid #7A7A7A;
+			border-radius: 0;
 			display: inline-block;
-			height: 30px;
-			margin: 8px 0;
+			height: 29px;
+			margin: 5px 0;
 			text-indent: -9999px;
 			width: 30px;
 		}
@@ -64,7 +72,11 @@
 		@include make-md-column(2);
 		border-right: 2px solid #7A7A7A;
 
-		@include breakpoint($celular){
+		@include breakpoint($note){
+			padding: 0;
+		}
+
+		@include breakpoint($tablet){
 			display: none;
 		}
 
@@ -92,7 +104,7 @@
 			margin: 0 10px;
 		}
 
-		@include breakpoint($celular){
+		@include breakpoint($tablet){
 			display: none;
 		}
 	}
