@@ -26,7 +26,7 @@
 		width: 106px;
 
 		@include breakpoint($tablet){
-			display: block;
+			display: none;
 			float: none;
 			margin: 0 auto 20px;
 		}
@@ -108,4 +108,71 @@
 			display: none;
 		}
 	}
-	}// fim Header
+
+	.menuResponsivo{
+		background-color: $header;
+		border: none;
+		display: none;
+
+		a{
+			color: #000 !important;			
+		}
+
+		@include breakpoint($tablet){
+			display: block;
+		}
+
+		.logoProfiteMobile{
+			background: url(../img/logo.png);
+			background-repeat: no-repeat;
+			display: inline-block;
+			float: left;
+			height: 30px;
+			margin: 0px 10px;
+			text-indent: -999px;
+			width: 106px;
+
+			@include breakpoint($tablet){
+				display: block;
+				float: none;
+				margin: 10px auto;
+			}
+		}
+
+		.qtdadeCompras{
+			background: #2ec4b6;
+			border-radius: 50%;
+			color: #fff;
+			font-size: 10px;
+			display: inline-block;
+			padding: 0px 7px;
+		}
+
+		.menuBandeirasMobile a{
+			display: inline-block;
+			@include breakpoint($paisagem){
+				display: block;
+			}
+		}
+
+		.navbar-toggle{
+			float: left;
+			border: none;
+			&:hover{
+				    background-color: #fff;
+			}
+			.icon-bar{
+				background-color: #000;
+			}
+		}
+
+		.navbar-nav{
+			float: right;
+			@include breakpoint($paisagem){
+				float: left;
+			}
+		}
+	}
+
+
+}// fim Header
